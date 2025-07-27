@@ -1,0 +1,193 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Ancizar+Serif:wght@300..900&family=Bitcount+Prop+Double:wght@100..900&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    background: #5145BA;
+}
+
+:where(.configContainer, .quizContainer){
+    display: none;
+ background-color: #fff;
+ border-radius: 8px;
+ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+.configContainer{
+    width: 415px;
+    padding: 25px;
+    text-align: center;
+}
+.configContainer .configTitle{
+    font-size: 1.31rem;
+}
+.configContainer .configOption{
+    margin-top: 25px;
+}
+.configOption .optionTilte{
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.configOption .catagoryOptions{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.configOption .questionOptions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 30px;
+
+}
+
+.configOption button{
+    padding: 12px;
+    font-size: 0.938;
+    font-weight: 500;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #988FFF;
+    transition: 0.3s ease;
+}
+.configOption button:hover,
+.quizContent .answerOption:hover
+{
+  background: #dad5fd;
+}
+.questionOptions button{
+ flex: 1 1 10%;
+}
+.configOption button.active{
+color: #5145BA;
+border-color: #5145BA;
+background: #dad5fd;
+}
+.configContainer .startQuizBtn,
+.quizFooter .nextQuestionBtn
+{
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 13px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    background: #5145BA;
+    transition: background 0.3s ease ;
+}
+.configContainer .startQuizBtn{
+margin-top: 30px;
+}
+
+.configContainer .startQuizBtn:hover,
+.quizFooter .nextQuestionBtn:hover
+{
+    background: #403795;
+}
+.quizContainer{
+    width: 480px;
+}
+.quizContainer .quizHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+}
+.quizHeader .quizTitle{
+    font-size: 1.43rem;
+    font-weight: 700;
+}
+.quizHeader .quizTimer{
+    display: flex;
+    align-items: center;
+    background: #32313C;
+    color: #fff;
+    width: 70px;
+    border-radius: 6px;
+    padding: 7px 9px;
+    font-weight: 600;
+    gap: 5px;
+
+}
+.quizHeader .quizTimer span{
+    font-size: 1.4rem;
+}
+
+.quizContent .questionText{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.quizContainer .quizContent {
+    padding: 20px 25px 25px;
+
+}
+.quizContent .answerOptions{
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.quizContent .answerOption{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 16px;
+    background: #F3F1FF;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 1px solid #B5ACFF;
+    transition: 0.3s ease;
+}
+.quizContent .answerOption span{
+    display: block;
+    flex-shrink: 0;
+    margin: -4px -3px -4px 12px;
+}
+.quizContent .answerOption.correct{
+    border-color: #B7E1C1;
+    background: #D4EDDA;
+    color: #155724;
+}
+.quizContent .answerOption.incorrect{
+    border-color: #F4BEC3;
+    background: #F8D7DA;
+    color: #721C24;
+}
+.quizContainer .quizFooter{
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #C6C6C6;
+}
+.quizFooter .nextQuestionBtn{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 9px 17px;
+}
+.quizFooter .questionStatus{
+    font-weight: 500;
+}
+.quizFooter .questionStatus b{
+    font-weight: 700;
+}
+
