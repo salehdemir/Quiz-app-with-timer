@@ -184,6 +184,7 @@ margin-top: 30px;
 .quizFooter .nextQuestionBtn{
     display: inline-flex;
     align-items: center;
+    visibility: hidden;
     gap: 5px;
     padding: 9px 17px;
 }
